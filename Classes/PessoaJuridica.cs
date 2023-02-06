@@ -14,7 +14,14 @@ namespace ProjetoBackEnd.Classes
 
         public override float CalcularImposto(float rendimentos)
         {
-            throw new NotImplementedException();
+        
+            float CalcImpostos = (rendimentos /100);
+
+            if (rendimentos <3000) { return CalcImpostos * 3;}
+            else if (rendimentos >=3000 && rendimentos < 6000) {return CalcImpostos * 5; }
+            else if (rendimentos >=6000 && rendimentos < 10000) {return CalcImpostos * 7;  }
+            else{return CalcImpostos * 9;}
+            
         }
 
         public bool ValidarCnpj(string cnpj)

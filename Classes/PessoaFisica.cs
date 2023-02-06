@@ -14,7 +14,14 @@ namespace ProjetoBackEnd.Classes
 
         public override float CalcularImposto(float rendimentos)
         {
-            throw new NotImplementedException();
+            
+            float CalcImpostos = (rendimentos /100);
+
+            if (rendimentos <1500) { return 0;}
+            else if (rendimentos >=1500 && rendimentos < 3500) {return CalcImpostos * 2; }
+            else if (rendimentos >=3500 && rendimentos < 6000) {return CalcImpostos * 3.5f;  }
+            else{return CalcImpostos * 5;}
+            
         }
 
         public bool ValidarDataNasc(DateTime DataNasc)
